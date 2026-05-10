@@ -1,0 +1,23 @@
+@use './fonts';
+
+:root {
+  --font-urbanist: 'Urbanist', system-ui, sans-serif;
+  --font-ramona: 'Ramona', Georgia, serif;
+
+  --color-black: #000;
+  --color-amarillo-retro: #fdf0c2;
+
+  font-family: var(--font-urbanist);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  min-height: 100svh;
+}
