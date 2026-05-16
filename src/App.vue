@@ -26,6 +26,46 @@
 import HomeCard from '@/components/HomeCard.vue'
 import cardImage from '@/assets/svg/logo-bandcamp.svg'
 import cardHoverImage from '@/assets/svg/forma-giratoria2.svg'
+import ValoresPage from '@/valores.vue'
+import LogoPage from '@/logo.vue'
+import ColoresPage from '@/colores.vue'
+import TipografiasPage from '@/tipografias.vue'
+import ReticulasPage from '@/reticulas.vue'
+import TratFotograficoPage from '@/tratFotografico.vue'
+import MotionPage from '@/motion.vue'
+import ElGraficosPage from '@/elGraficos.vue'
+import SistDisenoPage from '@/sistDiseno.vue'
+
+const pages = {
+  '/valores': ValoresPage,
+  '/logo': LogoPage,
+  '/colores': ColoresPage,
+  '/tipografias': TipografiasPage,
+  '/reticulas': ReticulasPage,
+  '/tratFotografico': TratFotograficoPage,
+  '/motion': MotionPage,
+  '/elGraficos': ElGraficosPage,
+  '/sistDiseño': SistDisenoPage,
+}
+
+const currentPath = ref(window.location.pathname)
+const CurrentPage = computed(() => pages[currentPath.value])
+
+function navigate(to) {
+  window.history.pushState({}, '', to)
+  currentPath.value = to
+}
+
+function openCard(to, event) {
+  if (!pages[to]) return
+
+  event.preventDefault()
+  navigate(to)
+}
+
+window.addEventListener('popstate', () => {
+  currentPath.value = window.location.pathname
+})
 
 const cards = [
   {
@@ -95,7 +135,13 @@ const cards = [
 </script>
 
 <template>
-  <main class="home-page">
+ <component
+    :is="CurrentPage"
+    v-if="CurrentPage"
+  />
+
+  <main v-else class="home-page">
+  
     <Header/>
 
     <div class="home-content">
