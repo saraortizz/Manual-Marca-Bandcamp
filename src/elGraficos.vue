@@ -1,7 +1,7 @@
 <script setup>
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
-import heroelGraficos from '@/assets/Images/Elementos Gráficos/Hero - Elementos Gráficos.png'
+import heroelGraficos from '@/assets/Images/Elementos Gráficos/Hero - Elementos gráficos.png'
 </script>
 
 <template>

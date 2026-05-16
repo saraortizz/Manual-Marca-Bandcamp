@@ -1,7 +1,7 @@
 <script setup>
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
-import heroTipografias from '@/assets/Images/Tipografías/Hero - Tipografías.png'
+import heroTipografias from '@/assets/Images/Tipografías/Hero - Tipografía.jpg'
 </script>
 
 <template>

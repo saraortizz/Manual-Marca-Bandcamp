@@ -1,7 +1,7 @@
 <script setup>
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
-import heroTratFotografico from '@/assets/Images/Tratamiento Fotográfico/Hero - Tratamiento Fotográfico.png'
+import heroTratFotografico from '@/assets/Images/Tratamiento Fotográfico/Hero - Tratamiento fotográfico.jpg'
 </script>
 
 <template>

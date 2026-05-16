@@ -1,7 +1,7 @@
 <script setup>
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
-import heroSistDisenño from '@/assets/Images/Sistema de Diseño/Hero - Sistema de Diseño.png'
+import heroSistDiseno from '@/assets/Images/Sistemadediseno/Hero - Sistema.png'
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import heroSistDisenño from '@/assets/Images/Sistema de Diseño/Hero - Sistema 
 
     <main class="page">
       <section class="hero">
-        <Hero :image="heroSistDiseño" alt="Sistema de Diseño" />
+        <Hero :image="heroSistDiseno" alt="Sistema de Diseno" />
       </section>
     </main>
   </div>
