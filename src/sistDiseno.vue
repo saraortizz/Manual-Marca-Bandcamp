@@ -1,7 +1,7 @@
 <script setup>
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
-import heroSistema from 'src/assets/Images/Sistemadediseño/Hero - Sistema.png'
+import heroSistema from 'src/assets/Images/Sistemadediseno/Hero - Sistema.png'
 </script>
 
 <template>
