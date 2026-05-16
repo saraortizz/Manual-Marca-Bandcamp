@@ -1,8 +1,9 @@
 <script setup>
-//import Header from '@/components/Header.vue'
-//import Footer from '@/components/Footer.vue'
-//import DownloadButton from '@/components/DownloadButton.vue'
-    
+import { ref, computed } from 'vue'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+import DownloadButton from '@/components/DownloadButton.vue'
+
     import LineaAmarilla from '@/assets/Images/Landing page/LineaAmarilla.png'
     import VideoIntro from '@/assets/Images/Landing page/VideoIntro.mp4'
     import SistemaHover from '@/assets/Images/Landing page/SistemaHover.png'
