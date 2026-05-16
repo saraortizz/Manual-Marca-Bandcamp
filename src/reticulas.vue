@@ -1,7 +1,7 @@
 <script setup>
 import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
-import heroReticulas from '@/assets/Images/Reticulas/Hero - Retículas.jpg'
+import heroReticulas from '@/assets/Images/Retículas/Hero -Retículas.jpg'
 </script>
 
 <template>
