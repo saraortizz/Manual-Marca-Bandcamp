@@ -1,12 +1,8 @@
 <script setup>
-import Header from '@/components/Header.vue'
-import Hero from '@/components/Hero.vue'
-import heroSistema from 'src/assets/Images/Sistemadediseno/Hero - Sistema.png'
+import heroSistema from '@/assets/images/sistema-diseno/hero-sistema.png'
 </script>
 
 <template>
-  <Header />
-
   <main class="page">
     <section class="hero">
       <Hero :image="heroSistema" alt="Sistema de diseño" />
@@ -15,5 +11,4 @@ import heroSistema from 'src/assets/Images/Sistemadediseno/Hero - Sistema.png'
 </template>
 
 <style lang="scss" scoped>
-
 </style>

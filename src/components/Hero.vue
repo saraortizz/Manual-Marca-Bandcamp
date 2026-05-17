@@ -1,4 +1,8 @@
 <script setup>
+defineOptions({
+  name: 'Hero',
+})
+
 defineProps({
   image: { type: String, required: true },
   alt: { type: String, default: '' }

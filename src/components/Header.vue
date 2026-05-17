@@ -1,25 +1,40 @@
 <script setup>
-defineProps({
-  textoIzquierda: { type: String, default: '' },
-  textoDerecha: { type: String, default: '' }
+defineOptions({
+  name: 'Header',
 })
+
+const { previousSection, nextSection } = useManualNavigation()
 </script>
 
 <template>
   <header class="main-header">
-    <div class="header-section left" @click="$emit('clickIzquierda')">
-      <img src="@/assets/svg/arrow-left.svg" class="arrow-icon" alt="Volver">
-      <span v-if="textoIzquierda" class="label">{{ textoIzquierda }}</span>
-    </div>
+    <NuxtLink
+      v-if="previousSection"
+      class="header-section left"
+      :to="previousSection.path"
+      :aria-label="`Ir a ${previousSection.title}`"
+    >
+      <img src="@/assets/svg/arrow-left.svg" class="arrow-icon" alt="">
+      <span class="label">{{ previousSection.title }}</span>
+    </NuxtLink>
 
-    <div class="header-logo" @click="$router.push('/')">
+    <div v-else class="header-section left"></div>
+
+    <NuxtLink class="header-logo" to="/" aria-label="Ir al inicio">
       <img src="@/assets/svg/logo-bandcamp.svg" alt="Bandcamp">
-    </div>
+    </NuxtLink>
 
-    <div class="header-section right" @click="$emit('clickDerecha')">
-      <span v-if="textoDerecha" class="label">{{ textoDerecha }}</span>
-      <img src="@/assets/svg/arrow-right.svg" class="arrow-icon" alt="Siguiente">
-    </div>
+    <NuxtLink
+      v-if="nextSection"
+      class="header-section right"
+      :to="nextSection.path"
+      :aria-label="`Ir a ${nextSection.title}`"
+    >
+      <span class="label">{{ nextSection.title }}</span>
+      <img src="@/assets/svg/arrow-right.svg" class="arrow-icon" alt="">
+    </NuxtLink>
+
+    <div v-else class="header-section right"></div>
   </header>
 </template>
 
@@ -41,6 +56,8 @@ defineProps({
     gap: 0.75rem;
     cursor: pointer;
     width: 18.75rem;
+    color: #000;
+    text-decoration: none;
 
     &.right {
       justify-content: flex-end;
@@ -59,6 +76,12 @@ defineProps({
     &.right:hover .arrow-icon {
       transform: translateX(0.3125rem);
     }
+
+    &:hover .label,
+    &:focus-visible .label {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   .header-logo {
@@ -74,10 +97,17 @@ defineProps({
   }
 
   .label {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
+    opacity: 0;
+    transform: translateX(-0.25rem);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    font-family: var(--font-urbanist);
+    font-weight: 700;
     font-size: 0.875rem;
-    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .right .label {
+    transform: translateX(0.25rem);
   }
 }
 </style>
