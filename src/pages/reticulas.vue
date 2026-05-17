@@ -16,7 +16,11 @@ import heroReticulas from '@/assets/images/reticulas/hero-reticulas.jpg'
     </section>
     <section class="web">
       <h2>RETÍCULAS WEB</h2>
-      <DownloadButton/>
+      <DownloadButton
+        :href="imagenReticulasWeb"
+        download="reticulas-web.png"
+        label="Descargar"
+      />
       <div class="reticulasWeb">
         <img class="imagenReticulasWeb" :src="imagenReticulasWeb">
       </div>
