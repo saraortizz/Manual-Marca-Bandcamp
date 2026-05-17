@@ -1,4 +1,6 @@
 <script setup>
+import urbanist from '@/assets/images/tipografia/urbanist.jpg'
+import ramona from '@/assets/images/tipografia/ramona.jpg'
 import incorrectos from '@/assets/images/tipografia/usos-incorrectos.png'
 import muestra2 from '@/assets/images/tipografia/muestra-tipografica-2.png'
 import muestra1 from '@/assets/images/tipografia/muestra-tipografica-1.png'
@@ -16,6 +18,10 @@ import heroTipografias from '@/assets/images/tipografia/hero-tipografia.jpg'
     <div class="page-content">
       <section class="subtitulo">
         <h1>USAMOS DOS TIPOGRAFÍAS PRINCIPALES EN EL DISEÑO DE BANDCAMP, QUE DESTACAN LA LIBERTAD DE NUESTROS PRINCIPIOS</h1>
+      </section>
+      <section class="tipos">
+        <img class="ramona" :src="ramona">
+        <img class="urbanist" :src="urbanist">
       </section>
       <img class="separacion" :src="separacion">
       <section class="combinaciones">
@@ -64,6 +70,20 @@ h1 {
   font-family:'Ramona';
   font-weight: 300;
   width: 85%;
+}
+
+.tipos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.ramona {
+  width: 40%;
+  height: auto;
+}
+.urbanist {
+  width: 40%;
 }
 
 .separacion {
