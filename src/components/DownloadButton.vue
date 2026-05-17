@@ -1,7 +1,11 @@
 <script setup>
+defineOptions({
+  name: 'DownloadButton',
+})
+
 defineProps({
   href: { type: String, default: '#' },
-  label: { type: String, default: 'Download' },
+  label: { type: String, default: 'Descargar' },
   download: { type: [Boolean, String], default: false }
 })
 </script>

@@ -1,4 +1,8 @@
 <script setup>
+defineOptions({
+  name: 'HomeCard',
+})
+
 defineProps({
   title: { type: String, required: true },
   to: { type: String, required: true },
@@ -10,7 +14,7 @@ defineProps({
 </script>
 
 <template>
-  <a :href="to" :class="['home-card', `home-card--${size}`]">
+  <NuxtLink :to="to" :class="['home-card', `home-card--${size}`]">
     <span class="home-card__media">
       <img class="home-card__image" :src="image" :alt="alt || title">
       <img
@@ -26,7 +30,7 @@ defineProps({
       <span class="home-card__title">{{ title }}</span>
       <span class="home-card__arrow" aria-hidden="true"></span>
     </span>
-  </a>
+  </NuxtLink>
 </template>
 
 <style lang="scss" scoped>
