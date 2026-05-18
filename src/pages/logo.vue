@@ -7,7 +7,7 @@ import logoHuella from '@/assets/images/logo/logo-huella.png'
 import logoHuellaColores from '@/assets/images/logo/logo-huella-colores.png'
 import areaRespeto from '@/assets/images/logo/area-de-respeto.png'
 import convivenciaMarcas from '@/assets/images/logo/logo-con-mas-marcas.png'
-import separador from '@/assets/images/Linea1.png'
+import separador from '@/assets/images/Linea1.svg'
 </script>
 
 <template>

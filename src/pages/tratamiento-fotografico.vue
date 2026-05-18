@@ -4,7 +4,7 @@ import negro from '@/assets/images/tratamiento-fotografico/negro.jpg'
 import azul from '@/assets/images/tratamiento-fotografico/azul.jpg'
 import verde from '@/assets/images/tratamiento-fotografico/verde.jpg'
 import naranja from '@/assets/images/tratamiento-fotografico/naranja.jpg'
-import separacion from '@/assets/images/Linea1.png'
+import separacion from '@/assets/images/Linea1.svg'
 import antesDespues from '@/assets/images/tratamiento-fotografico/antesDespues.png'
 import heroTratFotografico from '@/assets/images/tratamiento-fotografico/hero-tratamiento-fotografico.jpg'
 </script>

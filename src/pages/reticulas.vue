@@ -4,7 +4,7 @@ import reticula1hover from '@/assets/images/reticulas/anuncio-con-reticula-1.png
 import reticula2 from '@/assets/images/reticulas/anuncio-reticula-2.jpg'
 import reticula1 from '@/assets/images/reticulas/anuncio-reticula-1.jpg'
 import datos from '@/assets/images/reticulas/textos-reticulas.png'
-import separacion from '@/assets/images/Linea1.png'
+import separacion from '@/assets/images/Linea1.svg'
 import imagenReticulasWeb from '@/assets/images/reticulas/reticulas-web.png'
 import heroReticulas from '@/assets/images/reticulas/hero-reticulas.jpg'
 </script>

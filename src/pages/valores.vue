@@ -2,8 +2,8 @@
 import { ref } from 'vue'
 import heroValores from '@/assets/images/valores-y-voz/hero-valores-y-voz.png'
 import huellasPapel from '@/assets/images/valores-y-voz/huellas-papel.gif'
-import lineaNegra2 from '@/assets/images/valores-y-voz/linea-negra2.png'
-import lineaNegra3 from '@/assets/images/valores-y-voz/linea-negra3.png'
+import lineaNegra2 from '@/assets/images/valores-y-voz/linea-negra2.svg'
+import lineaNegra3 from '@/assets/images/valores-y-voz/linea-negra3.svg'
 import formaGiratoria from '@/assets/images/valores-y-voz/forma-giratoria-2.gif'
 
 const activeSection = ref(null)

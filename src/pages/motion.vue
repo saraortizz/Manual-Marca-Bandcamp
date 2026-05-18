@@ -4,7 +4,7 @@ import videoPublicidad from '@/assets/images/motion/PVideoPubli.mp4'
 import videoHero from '@/assets/images/motion/hero-componente.mp4'
 import formaGiratoria2 from '@/assets/images/motion/forma-giratoria-2.gif'
 import formaGiratoria3 from '@/assets/images/motion/forma-giratoria-3.gif'
-import lineaDivisoria from '@/assets/images/Linea1.png'
+import lineaDivisoria from '@/assets/images/Linea1.svg'
 
 function downloadFile(href, filename) {
   const link = document.createElement('a')
