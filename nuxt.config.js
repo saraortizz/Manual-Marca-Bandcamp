@@ -3,6 +3,10 @@ export default defineNuxtConfig({
   css: ['@/styles/style.scss'],
   app: {
     head: {
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/favicon.png?v=2' },
+        { rel: 'shortcut icon', type: 'image/png', href: '/favicon.png?v=2' },
+      ],
       title: 'Bandcamp',
       htmlAttrs: {
         lang: 'es',
