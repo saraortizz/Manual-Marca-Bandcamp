@@ -174,7 +174,7 @@ const cards = [
 
 .home-footer {
   box-sizing: border-box;
-  width: min(100%, 83rem);
+  width: min(100%, 8rem);
   margin: 0 auto;
   padding: 0 1.5rem 2rem;
   color: var(--color-amarillo-retro);
