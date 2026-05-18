@@ -1,4 +1,8 @@
 <script setup>
+import reticula2hover from '@/assets/images/reticulas/anuncio-con-reticula-2.png'
+import reticula1hover from '@/assets/images/reticulas/anuncio-con-reticula-1.png'
+import reticula2 from '@/assets/images/reticulas/anuncio-reticula-2.jpg'
+import reticula1 from '@/assets/images/reticulas/anuncio-reticula-1.jpg'
 import datos from '@/assets/images/reticulas/textos-reticulas.png'
 import separacion from '@/assets/images/Linea1.png'
 import imagenReticulasWeb from '@/assets/images/reticulas/reticulas-web.png'
@@ -33,8 +37,14 @@ import heroReticulas from '@/assets/images/reticulas/hero-reticulas.jpg'
         <p>Artículos grandes como Vinilos pueden aparecer cortados, aludiendo a que su tamaño es mayor que otros productos como los CDs</p>
       </div>
       <div class="reticulasPubli">
-        
-        <img class="datos" :src="datos">
+        <div class="hover-card">
+          <img class="img-normal" :src="reticula1">
+          <img class="img-hover" :src="reticula1hover">
+        </div>
+        <div class="hover-card">
+          <img class="img-normal" :src="reticula2">
+          <img class="img-hover" :src="reticula2hover">
+        </div>
       </div>
     </section>
     </div>
@@ -98,6 +108,41 @@ h4 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   margin-top: 0;
+}
+
+.reticulasPubli {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+
+}
+
+.hover-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  .img-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  &:hover .img-hover {
+    opacity: 1;
+  }
+
+  &:hover .img-normal {
+    opacity: 1;
+  }
 }
 
 .datos {

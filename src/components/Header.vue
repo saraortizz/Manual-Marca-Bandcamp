@@ -47,7 +47,7 @@ const { previousSection, nextSection } = useManualNavigation()
   justify-content: space-between;
   align-items: center;
   padding: 0 2.5rem;
-  height: 7.375rem;
+  height: 5.7rem;
   background-color: var(--color-amarillo-retro);
 
   .header-section {
