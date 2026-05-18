@@ -90,17 +90,35 @@ h2 {
   grid-template-columns: (1fr 1fr);
   gap: 2rem;
 }
+.column1 {
+  width: 75%;
+}
+
+h4 {
+  font-family: 'Urbanist';
+  font-size: 1rem;
+  width: 80%;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
 
 .column2 {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  width: 75%;
 }
 
 .lineaVertical {
-  height: 9rem;
+  height: 9.5rem;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
 }
 
 .antesDespues {
+  padding-top: 2rem;
   width: 100%;
 }
 .separacion {
