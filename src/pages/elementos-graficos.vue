@@ -1,5 +1,5 @@
 <script setup>
-import heroElementosGraficos from '@/assets/images/elementos-graficos/hero-elementos-graficos.png'
+import heroElementosGraficos from '@/assets/images/elementos-graficos/hero-elementos-graficos.jpg'
 import huellasExplicacion from '@/assets/images/elementos-graficos/huellas-explicacion.png'
 import huellas from '@/assets/images/elementos-graficos/huellas.png'
 import mockupBillboard from '@/assets/images/elementos-graficos/mockup-bandcamp-billboard-1.png'

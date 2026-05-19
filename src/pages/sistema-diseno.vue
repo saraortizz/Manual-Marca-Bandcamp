@@ -1,5 +1,5 @@
 <script setup>
-import heroSistema from '@/assets/images/sistema-diseno/hero-sistema.png'
+import heroSistema from '@/assets/images/sistema-diseno/hero-sistema.jpg'
 import lineaAmarilla from '@/assets/images/landing-page/linea-amarilla.png'
 
 const figmaUrl = 'https://www.figma.com/design/bouzwykHSwWDYPVDvGhVZD/Sistema-de-dise%C3%B1o---Bandcamp_MacedoniaStudio?node-id=0-1&t=Ttw9TN6sr6Qpcclf-1'

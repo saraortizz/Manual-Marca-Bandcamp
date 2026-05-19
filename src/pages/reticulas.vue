@@ -3,7 +3,6 @@ import reticula2hover from '@/assets/images/reticulas/anuncio-con-reticula-2.png
 import reticula1hover from '@/assets/images/reticulas/anuncio-con-reticula-1.png'
 import reticula2 from '@/assets/images/reticulas/anuncio-reticula-2.jpg'
 import reticula1 from '@/assets/images/reticulas/anuncio-reticula-1.jpg'
-import datos from '@/assets/images/reticulas/textos-reticulas.png'
 import separacion from '@/assets/images/Linea1.svg'
 import imagenReticulasWeb from '@/assets/images/reticulas/reticulas-web.png'
 import heroReticulas from '@/assets/images/reticulas/hero-reticulas.jpg'
@@ -26,7 +25,32 @@ import heroReticulas from '@/assets/images/reticulas/hero-reticulas.jpg'
         label="Descargar"
       />
       <div class="reticulasWeb">
+        <div class="titulosReticulasWeb">
+          <p>Ordenador</p>
+          <p>Mobile</p>
+        </div>
         <img class="imagenReticulasWeb" :src="imagenReticulasWeb">
+        <div class="datosReticulasWeb">
+          <div class="datosOrdenador">
+            <div>
+              <p>Columnas: 10</p>
+              <p>Margen: 80</p>
+            </div>
+            <div>
+              <p>Medianil: 20</p>
+              <p>Filas: 1px</p>
+            </div>
+          </div>
+          <div class="datosMobile">
+            <div>
+              <p>Columnas: 1</p>
+              <p>Margen: 25</p>
+            </div>
+            <div>
+              <p>Filas: 1px</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <img class="separacion" :src="separacion">
@@ -44,6 +68,16 @@ import heroReticulas from '@/assets/images/reticulas/hero-reticulas.jpg'
         <div class="hover-card">
           <img class="img-normal" :src="reticula2">
           <img class="img-hover" :src="reticula2hover">
+        </div>
+      </div>
+      <div class="datosReticula">
+        <div>
+          <p>Columnas: 12</p>
+          <p>Filas: 8</p>
+        </div>
+        <div>
+          <p>Margen: 36px</p>
+          <p>Medianil: 16px</p>
         </div>
       </div>
     </section>
@@ -90,7 +124,48 @@ h2 {
 
 .imagenReticulasWeb {
   width: 100%;
+  display: block;
+}
+
+.reticulasWeb {
   padding-top: 3rem;
+}
+
+.titulosReticulasWeb {
+  display: grid;
+  grid-template-columns: 72% 1fr;
+  gap: 6.5%;
+  margin-bottom: 0.75rem;
+
+  p {
+    margin: 0;
+    font-size: 1.45rem;
+  }
+}
+
+.datosReticulasWeb {
+  display: grid;
+  grid-template-columns: 72% 1fr;
+  gap: 6.5%;
+  padding-top: 1rem;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+.datosOrdenador{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 4rem;
+}
+
+.datosMobile {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 4rem;
 }
 
 .separacion {
@@ -115,8 +190,7 @@ h4 {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   padding-top: 1rem;
-  padding-bottom: 3rem;
-
+  padding-bottom: 1.25rem;
 }
 
 .hover-card {
@@ -145,8 +219,17 @@ h4 {
   }
 }
 
-.datos {
-  width: 100%;
+.datosReticula {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 4rem;
+  padding-bottom: 3rem;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
 }
 
 </style>

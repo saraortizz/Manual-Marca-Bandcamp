@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import heroValores from '@/assets/images/valores-y-voz/hero-valores-y-voz.png'
+import heroValores from '@/assets/images/valores-y-voz/hero-valores-y-voz.jpg'
 import huellasPapel from '@/assets/images/valores-y-voz/huellas-papel.gif'
 import lineaNegra2 from '@/assets/images/valores-y-voz/linea-negra2.svg'
 import lineaNegra3 from '@/assets/images/valores-y-voz/linea-negra3.svg'

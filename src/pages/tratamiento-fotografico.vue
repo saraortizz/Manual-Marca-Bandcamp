@@ -109,7 +109,7 @@ h4 {
 }
 
 .lineaVertical {
-  height: 9.5rem;
+  height: 9rem;
 }
 
 h3 {
