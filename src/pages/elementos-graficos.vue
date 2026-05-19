@@ -82,15 +82,18 @@ import usosElementosImg from '@/assets/images/elementos-graficos/usos-de-element
 
         <p class="insignias-examples">Vamos a ver algunos ejemplos</p>
 
-        <img class="insignias-bandcamp" :src="insigniasBandcamp" alt="Insignias Bandcamp">
+        <div class="insignias-bandcamp-frame">
+          <img class="insignias-bandcamp" :src="insigniasBandcamp" alt="Insignias Bandcamp">
+        </div>
 
         <h3 class="insignias-artist-title">EL ARTISTA TAMBIÉN TIENE SU PROPIA INSIGNIA</h3>
 
         <p class="insignias-artist-desc">
           Su funcionamiento es el mismo que las insignias de Bandcamp, la diferencia es que aparecerá el icono de la huella del artista en color negro. Estará enmarcado por una estrella, el número de puntas dependerá del logro obtenido, diferenciándose del círculo de las insignias del sistema habitual, el color lo eliges tú.
         </p>
-
-        <img class="insignias-artist" :src="insigniasArtista" alt="Insignias artista">
+        <div class="insignias-artist-contenedor">
+          <img class="insignias-artist" :src="insigniasArtista" alt="Insignias artista">
+        </div>
 
         <img class="line-divider" :src="lineaSeparadora" alt="">
       </section>
@@ -244,12 +247,10 @@ h1 {
 .insignias-heading {
   margin: 0;
   font-family: var(--font-ramona);
-  font-size: 3rem; /* 48px */
-  font-weight: 300; /* Ramona Light */
-  line-height: 3.3125rem; /* 53px */
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 3.3125rem;
   text-transform: uppercase;
-  /* make heading wider than page content to span more of the viewport */
-  /* expand only to the right while keeping left edge aligned */
   width: calc(100% + 5rem);
   max-width: none;
   margin-left: 0;
@@ -257,43 +258,57 @@ h1 {
 
 .insignias-intro {
   margin: 0;
-  font-size: 1rem; /* 16px */
-  line-height: 1.5rem; /* 24px */
+  font-size: 1rem;
+  line-height: 1.5rem;
   max-width: 60rem;
 }
 
 .insignias-examples {
   margin: 0.25rem 0 0;
-  font-size: 1.25rem; /* 20px */
-  line-height: 1.5rem; /* 24px */
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   font-weight: 800;
 }
 
-.insignias-bandcamp {
+.insignias-bandcamp-frame {
   width: 100%;
-  display: block;
+  overflow: hidden;
   border-radius: 0.75rem;
+}
+
+.insignias-bandcamp {
+  width: calc(100% + 0.25rem);
+  max-width: none;
+  display: block;
+  margin-left: -0.125rem;
+  margin-top: -0.125rem;
+  margin-bottom: -0.125rem;
 }
 
 .insignias-artist-title {
   margin: 2rem 0 0.5rem;
   font-family: var(--font-ramona);
-  font-size: 2rem; /* 32px */
-  font-weight: 800; /* Ramona Bold */
-  line-height: 2.3125rem; /* 37px */
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 2.3125rem;
   text-transform: uppercase;
 }
 
 .insignias-artist-desc {
   margin: 0;
-  font-size: 1rem; /* 16px */
-  line-height: 1.5rem; /* 24px */
+  font-size: 1rem;
+  line-height: 1.5rem;
   max-width: 60rem;
 }
 
+.insignias-artist-contenedor {
+  display: flex;
+  justify-content: center;
+
+}
+
 .insignias-artist {
-  width: 100%;
-  display: block;
+  width: 75%;
   border-radius: 0.75rem;
 }
 
@@ -306,23 +321,23 @@ h1 {
 .otros-title {
   margin: 0;
   font-family: var(--font-ramona);
-  font-size: 2rem; /* 32px */
+  font-size: 2rem;
   font-weight: 800;
-  line-height: 2.3125rem; /* 37px */
+  line-height: 2.3125rem;
   text-transform: uppercase;
 }
 
 .otros-p {
   margin: 0;
-  font-size: 1rem; /* 16px */
-  line-height: 1.5rem; /* 24px */
+  font-size: 1rem;
+  line-height: 1.5rem;
   max-width: 60rem;
 }
 
 .otros-bold {
   margin: 0.5rem 0 0;
-  font-size: 1.25rem; /* 20px */
-  line-height: 1.5rem; /* 24px */
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   font-weight: 800;
 }
 
@@ -341,9 +356,9 @@ h1 {
 .usos-title {
   margin: 2rem 0 0;
   font-family: var(--font-ramona);
-  font-size: 2rem; /* 32px */
+  font-size: 2rem;
   font-weight: 800;
-  line-height: 2.3125rem; /* 37px */
+  line-height: 2.3125rem;
   text-transform: uppercase;
 }
 
@@ -365,7 +380,7 @@ h1 {
   height: 1.35rem;
   display: block;
   object-fit: fill;
-  margin: 1.5rem 0 3rem;
+  margin: 2rem 0 2rem;
 }
 
 @media (max-width: 58rem) {
