@@ -1,5 +1,5 @@
 <script setup>
-import heroLogo from '@/assets/images/logo/hero-logo.png'
+import heroLogoVideo from '@/assets/video/bandcamplogoconstruccion.mp4'
 import logoPrincipal from '@/assets/images/logo/bandcamp-logo.png'
 import colores from '@/assets/images/logo/bandcamp-logo-colores-principales.png'
 import imgexcepcional from '@/assets/images/logo/logo-con-huella-prueba.png'
@@ -13,7 +13,14 @@ import separador from '@/assets/images/Linea1.svg'
 <template>
   <main class="page">
     <section class="hero">
-      <Hero :image="heroLogo" alt="Logo" />
+      <video
+        class="hero-video"
+        :src="heroLogoVideo"
+        autoplay
+        loop
+        muted
+        playsinline
+      />
     </section>
     <div class="page-content">
     <section class="subtitulo">
@@ -86,6 +93,16 @@ import separador from '@/assets/images/Linea1.svg'
   flex: 1;
   flex-direction: column;
   gap: 3rem;
+}
+
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  display: block;
 }
 
 .subtitulo {
